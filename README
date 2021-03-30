@@ -1,0 +1,5 @@
+wget https://cdn-package-store6.deepin.com/appstore/pool/appstore/c/com.qq.weixin/com.qq.weixin_2.0.0-2_amd64.deb
+# Unpack and put data.tar.xz in this dir
+cd ..
+tar -zcvf wechat-uos.tar.gz wechat-uos
+rpmbuild -tb wechat-uos.tar.gz
