@@ -1,8 +1,9 @@
 %global _missing_build_ids_terminate_build 0
 %global debug_package %{nil}
+%define __requires_exclude libnode\.so|libffmpeg\.so
 Name:wechat-uos 
 Version: 2.0.0
-Release: 2%{?dist}
+Release: 3%{?dist}
 Summary: UOS Wechat
 License: MIT
 URL: https://www.chinauos.com/resource/download-professional
@@ -59,5 +60,8 @@ install -Dm644 wechat-uos.desktop -t %{buildroot}/usr/share/applications/
 
 
 %changelog
+* Thu Apr 01 2021 KleeMoe <feng591892871@gmail.com> - 2.0.0-3
+Remove dependencies libnode.so libffmpeg.so
+
 * Tue Mar 30 2021 KleeMoe <feng591892871@gmail.com> - 2.0.0-2
 Migrate From AUR
